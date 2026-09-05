@@ -1,0 +1,20 @@
+# MR Creator
+
+> VS Code extension for creating Merge Requests from multiple branches in one click
+
+MR Creator — это расширение для VS Code, которое создаёт Merge Requests из нескольких веток за один клик. Поддерживает GitLab, GitHub и Bitbucket (включая self-hosted).
+
+## Основные возможности
+- Мульти-source MR: создание нескольких MR из разных веток за один клик
+- Три Git-провайдера: GitLab, GitHub, Bitbucket с поддержкой self-hosted
+- Автосоздание веток через API
+- Безопасное хранение токенов в OS keychain
+- Шаблоны и история MR
+
+## Ссылки
+- Скачать: https://github.com/a1phaZ/mr-creator-landing/releases/latest
+- Telegram бот для лицензий: https://t.me/mr_creator_license_bot
+- GitHub: https://github.com/a1phaZ/mr-creator-standalone
+
+## Цена
+14-дневный пробный период бесплатно. Далее — покупка лицензии через Telegram бот.

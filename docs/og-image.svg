@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#1e1e1e"/>
+  <rect x="60" y="60" width="240" height="240" rx="24" fill="#007acc"/>
+  <text x="180" y="220" text-anchor="middle" font-size="120" font-weight="bold" fill="white" font-family="system-ui">MR</text>
+  <text x="600" y="250" text-anchor="middle" font-size="64" font-weight="bold" fill="#ffffff" font-family="system-ui">MR Creator</text>
+  <text x="600" y="340" text-anchor="middle" font-size="32" fill="#cccccc" font-family="system-ui">Merge Requests за 30 секунд</text>
+  <text x="600" y="420" text-anchor="middle" font-size="24" fill="#808080" font-family="system-ui">VS Code • GitLab • GitHub • Bitbucket</text>
+  <rect x="420" y="480" width="360" height="60" rx="12" fill="#007acc"/>
+  <text x="600" y="518" text-anchor="middle" font-size="20" fill="#ffffff" font-family="system-ui">Скачать бесплатно</text>
+</svg>
