@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR Creator — Merge Requests за 30 секунд</title>
+  <meta name="description" content="VS Code расширение для создания Merge Requests. GitLab, GitHub, Bitbucket. Мульти-source MR за один клик.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" width="28" height="28">
+          <rect width="32" height="32" rx="6" fill="#007acc"/>
+          <text x="16" y="22" text-anchor="middle" font-size="18" font-weight="bold" fill="white" font-family="system-ui">MR</text>
+        </svg>
+        <span class="logo-text">MR Creator</span>
+      </a>
+      <nav class="header-right">
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a href="https://github.com/a1phaZ/mr-creator-landing/releases/latest" class="btn btn-sm btn-primary" data-ru="Скачать" data-en="Download">Скачать</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge" data-ru="VS Code расширение" data-en="VS Code Extension">VS Code расширение</div>
+      <h1 class="hero-title">
+        <span class="hero-title-accent">MR Creator</span>
+      </h1>
+      <p class="hero-subtitle" data-ru="Merge Requests за 30 секунд" data-en="Merge Requests in 30 seconds">Merge Requests за 30 секунд</p>
+      <p class="hero-desc" data-ru="Создавайте MR из нескольких веток за один клик. Поддержка GitLab, GitHub и Bitbucket — включая self-hosted." data-en="Create MRs from multiple branches in one click. GitLab, GitHub and Bitbucket support — including self-hosted.">Создавайте MR из нескольких веток за один клик. Поддержка GitLab, GitHub и Bitbucket — включая self-hosted.</p>
+      <div class="hero-buttons">
+        <a href="https://github.com/a1phaZ/mr-creator-landing/releases/latest" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"/></svg>
+          <span data-ru="Скачать .vsix" data-en="Download .vsix">Скачать .vsix</span>
+        </a>
+        <a href="https://t.me/mr_creator_license_bot" class="btn btn-outline btn-lg">
+          <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-4.13-3.16-.59 2.82a.75.75 0 0 1-1.02.5L8.5 6.82l-1.63 1.3a.75.75 0 0 1-.98-.18l.02-.02-2.18-.73a.75.75 0 0 0-.48.08l-.34.17.84 2.67.77-.62 1.56 1.17a.75.75 0 0 0 1.18-.35l.76-2.75 1.8 1.35a.75.75 0 0 0 1.17-.4l.42-2.05a.75.75 0 0 0-.52-.88Z"/></svg>
+          <span data-ru="Купить лицензию" data-en="Buy License">Купить лицензию</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Killer Feature -->
+  <section class="section killer-feature">
+    <div class="container">
+      <div class="section-badge" data-ru="Киллер-фича" data-en="Killer Feature">Киллер-фича</div>
+      <h2 class="section-title" data-ru="Мульти-source Merge Request" data-en="Multi-source Merge Request">Мульти-source Merge Request</h2>
+      <p class="section-desc" data-ru="Создавайте несколько MR из разных веток за один клик. Не готовые ветки — исключайте, остальные обрабатываются автоматически." data-en="Create multiple MRs from different branches in one click. Exclude unready branches — the rest are processed automatically.">Создавайте несколько MR из разных веток за один клик. Не готовые ветки — исключайте, остальные обрабатываются автоматически.</p>
+
+      <div class="killer-visual">
+        <div class="branch-group">
+          <div class="branch-item">
+            <span class="branch-dot" style="background:#007acc"></span>
+            <span class="branch-name">feature/login</span>
+          </div>
+          <div class="branch-item">
+            <span class="branch-dot" style="background:#7c5cbf"></span>
+            <span class="branch-name">feature/api</span>
+          </div>
+          <div class="branch-item">
+            <span class="branch-dot excluded" style="background:#555"></span>
+            <span class="branch-name dim">feature/wip</span>
+          </div>
+          <div class="branch-item">
+            <span class="branch-dot" style="background:#3fb950"></span>
+            <span class="branch-name">fix/perf</span>
+          </div>
+        </div>
+        <div class="arrow-group">
+          <svg viewBox="0 0 60 40" width="60" height="40"><path d="M5 20 L50 20" stroke="#007acc" stroke-width="2" fill="none" stroke-dasharray="4"/><polygon points="50,15 58,20 50,25" fill="#007acc"/></svg>
+        </div>
+        <div class="mr-group">
+          <div class="mr-item"><span class="mr-badge new">MR #1</span> feature/login → main</div>
+          <div class="mr-item"><span class="mr-badge new">MR #2</span> feature/api → main</div>
+          <div class="mr-item"><span class="mr-badge new">MR #3</span> fix/perf → main</div>
+        </div>
+      </div>
+
+      <p class="killer-stat">
+        <span data-ru="Вместо 10 минут в браузере —" data-en="Instead of 10 minutes in browser —">Вместо 10 минут в браузере —</span>
+        <strong data-ru="30 секунд в VS Code." data-en="30 seconds in VS Code.">30 секунд в VS Code.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Advantages -->
+  <section class="section advantages">
+    <div class="container">
+      <h2 class="section-title" data-ru="Преимущества" data-en="Advantages">Преимущества</h2>
+
+      <div class="adv-grid">
+        <div class="adv-card">
+          <div class="adv-icon">🔀</div>
+          <h3 class="adv-title" data-ru="Три Git-провайдера" data-en="Three Git Providers">Три Git-провайдера</h3>
+          <p class="adv-desc" data-ru="GitLab, GitHub, Bitbucket — с поддержкой self-hosted инстансов. Единый интерфейс, единая лицензия." data-en="GitLab, GitHub, Bitbucket — with self-hosted support. One interface, one license.">GitLab, GitHub, Bitbucket — с поддержкой self-hosted инстансов. Единый интерфейс, единая лицензия.</p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon">🌿</div>
+          <h3 class="adv-title" data-ru="Автосоздание веток" data-en="Auto Branch Creation">Автосоздание веток</h3>
+          <p class="adv-desc" data-ru="Если целевая ветка не существует — расширение создаст её автоматически через API." data-en="If the target branch doesn't exist — the extension creates it automatically via API.">Если целевая ветка не существует — расширение создаст её автоматически через API.</p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon">🧠</div>
+          <h3 class="adv-title" data-ru="Умное назначение ревьюера" data-en="Smart Reviewer Assignment">Умное назначение ревьюера</h3>
+          <p class="adv-desc" data-ru="При конфликтах MR автоматически назначается на автора последнего коммита. Контекстная логика." data-en="On merge conflicts, MR is auto-assigned to the last commit author. Context-aware logic.">При конфликтах MR автоматически назначается на автора последнего коммита. Контекстная логика.</p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon">🔐</div>
+          <h3 class="adv-title" data-ru="Безопасное хранение секретов" data-en="Secure Secret Storage">Безопасное хранение секретов</h3>
+          <p class="adv-desc" data-ru="Токены хранятся в OS keychain (macOS Keychain / Windows Credential Vault / Linux Secret Service)." data-en="Tokens stored in OS keychain (macOS Keychain / Windows Credential Vault / Linux Secret Service).">Токены хранятся в OS keychain (macOS Keychain / Windows Credential Vault / Linux Secret Service).</p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon">📋</div>
+          <h3 class="adv-title" data-ru="Шаблоны и история MR" data-en="Templates & MR History">Шаблоны и история MR</h3>
+          <p class="adv-desc" data-ru="Сохраняйте типовые шаблоны с плейсхолдерами. Отслеживайте историю созданных MR." data-en="Save reusable templates with placeholders. Track history of created MRs.">Сохраняйте типовые шаблоны с плейсхолдерами. Отслеживайте историю созданных MR.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation -->
+  <section class="section installation">
+    <div class="container">
+      <h2 class="section-title" data-ru="Установка" data-en="Installation">Установка</h2>
+
+      <div class="install-steps">
+        <div class="install-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4 data-ru="Скачайте .vsix файл" data-en="Download .vsix file">Скачайте .vsix файл</h4>
+            <p data-ru="Нажмите кнопку 'Скачать' выше или скачайте из GitHub Releases." data-en="Click 'Download' above or get it from GitHub Releases.">Нажмите кнопку "Скачать" выше или скачайте из GitHub Releases.</p>
+          </div>
+        </div>
+        <div class="install-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4 data-ru="Установите в VS Code" data-en="Install in VS Code">Установите в VS Code</h4>
+            <p data-ru="Откройте VS Code → Extensions → ··· → Install from VSIX → выберите файл." data-en="Open VS Code → Extensions → ··· → Install from VSIX → select the file.">Откройте VS Code → Extensions → ··· → Install from VSIX → выберите файл.</p>
+          </div>
+        </div>
+        <div class="install-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4 data-ru="Активируйте лицензию" data-en="Activate License">Активируйте лицензию</h4>
+            <p data-ru="Получите лицензионный ключ в Telegram боте и вставьте в расширение." data-en="Get a license key from the Telegram bot and paste it into the extension.">Получите лицензионный ключ в Telegram боте и вставьте в расширение.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="install-code">
+        <code>code --install-extension mr-creator-0.4.0.vsix</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container">
+      <h2 class="section-title" data-ru="Начните создавать MR быстрее" data-en="Start creating MRs faster">Начните создавать MR быстрее</h2>
+      <p class="section-desc" data-ru="14-дневный пробный период бесплатно. Без кредитной карты." data-en="14-day free trial. No credit card required.">14-дневный пробный период бесплатно. Без кредитной карты.</p>
+      <div class="cta-buttons">
+        <a href="https://github.com/a1phaZ/mr-creator-landing/releases/latest" class="btn btn-primary btn-lg">
+          <span data-ru="Скачать бесплатно" data-en="Download Free">Скачать бесплатно</span>
+        </a>
+        <a href="https://t.me/mr_creator_license_bot" class="btn btn-outline btn-lg">
+          <span data-ru="Купить лицензию" data-en="Buy License">Купить лицензию</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-text">&copy; 2026 MR Creator</span>
+      </div>
+      <div class="footer-right">
+        <a href="https://t.me/mr_creator_license_bot" class="footer-link" data-ru="Telegram Bot" data-en="Telegram Bot">Telegram Bot</a>
+        <a href="https://github.com/a1phaZ/mr-creator-standalone" class="footer-link">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const lang = btn.dataset.lang;
+        document.documentElement.setAttribute('data-lang', lang);
+        document.querySelectorAll('[data-ru][data-en]').forEach(el => {
+          el.textContent = el.getAttribute('data-' + lang);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
