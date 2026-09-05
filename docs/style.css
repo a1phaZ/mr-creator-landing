@@ -188,6 +188,7 @@ body {
   font-weight: 700;
   color: var(--text-bright);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .section-desc {
