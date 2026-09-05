@@ -143,6 +143,12 @@ body {
   text-align: center;
 }
 
+.section-header {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
 .hero-badge {
   display: inline-block;
   padding: 4px 14px;
@@ -153,6 +159,9 @@ body {
   font-weight: 600;
   margin-bottom: 20px;
   border: 1px solid rgba(0, 122, 204, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .hero-title {
@@ -205,6 +214,9 @@ body {
   font-weight: 600;
   margin-bottom: 16px;
   border: 1px solid rgba(124, 92, 191, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .section-title {
