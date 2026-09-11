@@ -12,7 +12,8 @@ MR Creator — это расширение для VS Code, которое соз
 - Шаблоны и история MR
 
 ## Ссылки
-- Скачать: https://github.com/a1phaZ/mr-creator-landing/releases/latest
+- Установить из Marketplace: https://marketplace.visualstudio.com/items?itemName=a1phaZ.mr-creator
+- Скачать .vsix: https://github.com/a1phaZ/mr-creator-landing/releases/latest
 - Telegram бот для лицензий: https://t.me/mr_creator_license_bot
 - GitHub: https://github.com/a1phaZ/mr-creator-standalone
 
