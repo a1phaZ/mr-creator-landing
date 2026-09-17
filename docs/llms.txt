@@ -2,14 +2,23 @@
 
 > VS Code extension for creating Merge Requests from multiple branches in one click
 
-MR Creator — это расширение для VS Code, которое создаёт Merge Requests из нескольких веток за один клик. Поддерживает GitLab, GitHub и Bitbucket (включая self-hosted).
+MR Creator — это расширение для VS Code, которое создаёт Merge Requests из нескольких веток за один клик. Поддерживает GitLab, GitHub и Bitbucket (включая self-hosted). Code Review доступен прямо в редакторе для всех подключённых провайдеров (Pro).
 
 ## Основные возможности
 - Мульти-source MR: создание нескольких MR из разных веток за один клик
 - Три Git-провайдера: GitLab, GitHub, Bitbucket с поддержкой self-hosted
+- Code Review в редакторе: файлы, диффы и комментарии
 - Автосоздание веток через API
 - Безопасное хранение токенов в OS keychain
 - Шаблоны и история MR
+- Auto-merge watcher и авто-назначение ревьюера (Pro)
+
+## Планы
+- **Free — $0**: все провайдеры, 1 подключение, до 3 веток за раз, история 7 дней
+- **Month — $5/мес**: безлимитные подключения, Code Review, auto-merge watcher
+- **Year — $49/год**: всё из Month, выгоднее на 18%
+- **Lifetime — $99**: однократный платёж, навсегда, все будущие обновления
+- **Team — $149/место, от 3 мест**: мультиместная лицензия, до 20% скидки
 
 ## Ссылки
 - Установить из Marketplace: https://marketplace.visualstudio.com/items?itemName=alphaZ.mr-creator-ext
@@ -18,4 +27,4 @@ MR Creator — это расширение для VS Code, которое соз
 - GitHub: https://github.com/a1phaZ/mr-creator-standalone
 
 ## Цена
-14-дневный пробный период бесплатно. Далее — покупка лицензии через Telegram бот.
+Free для старта без карты. PRO — от $5/мес с 14-дневным бесплатным пробным периодом. Покупка лицензии через Telegram бот.
