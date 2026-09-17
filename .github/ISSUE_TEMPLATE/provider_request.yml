@@ -1,8 +1,6 @@
 name: Provider request
 description: Запросить поддержку нового Git-провайдера в MR Creator
 title: "[Provider] "
-labels:
-  - provider-request
 body:
   - type: input
     id: provider

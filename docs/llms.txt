@@ -26,7 +26,7 @@ MR Creator — это расширение для VS Code, которое соз
 - Bitbucket — Cloud, Code Review
 - Bitbucket Server — Self-hosted, Code Review
 
-Нужен другой провайдер? Запросить: https://github.com/a1phaZ/mr-creator-landing/issues/new?template=provider_request.yml&labels=provider-request
+Нужен другой провайдер? Запросить: https://github.com/a1phaZ/mr-creator-landing/issues/new?template=provider_request.yml
 
 ## Ссылки
 - Установить из Marketplace: https://marketplace.visualstudio.com/items?itemName=alphaZ.mr-creator-ext
