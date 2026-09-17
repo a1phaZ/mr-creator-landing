@@ -1,0 +1,67 @@
+name: Provider request
+description: Запросить поддержку нового Git-провайдера в MR Creator
+title: "[Provider] "
+labels:
+  - provider-request
+body:
+  - type: input
+    id: provider
+    attributes:
+      label: Провайдер
+      description: Название Git-платформы, для которой нужна поддержка (Gitea, Gogs, Azure DevOps, Assembla и т.п.)
+      placeholder: например, Gitea
+    validations:
+      required: true
+  - type: dropdown
+    id: hosting
+    attributes:
+      label: Хостинг
+      description: Где обычно разворачивается платформа?
+      options:
+        - Cloud (SaaS)
+        - Self-hosted
+        - Both (и облако, и self-hosted)
+    validations:
+      required: true
+  - type: input
+    id: docs
+    attributes:
+      label: Документация REST API
+      description: Ссылка на документацию REST API (эндпоинты MR/PR, схемы авторизации)
+      placeholder: https://docs.example.com/api
+    validations:
+      required: true
+  - type: dropdown
+    id: auth
+    attributes:
+      label: Аутентификация
+      description: Как пользовательские токены авторизуются в API?
+      options:
+        - Personal access token
+        - OAuth2 / OIDC
+        - Basic (username + password)
+        - Другое
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Нужна поддержка в
+      description: Какая часть MR Creator должна заработать в первую очередь?
+      multiple: true
+      options:
+        - Создание merge requests (ядро)
+        - Code Review в редакторе
+        - Обе
+  - type: input
+    id: instance
+    attributes:
+      label: Публичный инстанс (необязательно)
+      description: Публичный/официальный инстанс для тестирования, если есть
+      placeholder: https://gitea.com
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Мотивация
+      description: Зачем вам этот провайдер? Сколько команд/репозиториев использует его?
+      placeholder: Мы используем X в проде для N репозиториев...
