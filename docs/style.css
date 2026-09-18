@@ -847,18 +847,58 @@ body {
   text-align: left;
 }
 
-.faq-item {
+details.faq-item {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: 12px;
+}
+
+details.faq-item > summary.faq-q {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
   padding: 18px 22px;
+  transition: color 0.2s;
+}
+
+details.faq-item > summary.faq-q::-webkit-details-marker {
+  display: none;
+}
+
+details.faq-item > summary.faq-q:hover {
+  color: var(--accent);
+}
+
+details.faq-item > summary.faq-q::after {
+  content: '+';
+  flex: 0 0 auto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--accent);
+}
+
+details.faq-item[open] > summary.faq-q::after {
+  content: '−';
+}
+
+details.faq-item[open] > summary.faq-q {
+  color: var(--accent);
 }
 
 .faq-q {
   font-size: 15px;
   font-weight: 700;
   color: var(--text-bright);
-  margin-bottom: 8px;
+}
+
+.faq-item > .faq-a {
+  padding: 0 22px 18px;
 }
 
 .faq-a {

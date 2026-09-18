@@ -468,18 +468,18 @@
       <p class="section-desc" data-ru="Коротко о том, как устроена лицензия и почему мы как-то проверяем её раз в сутки." data-en="How the license works and why it checks in with the server once a day.">Коротко о том, как устроена лицензия и почему мы как-то проверяем её раз в сутки.</p>
 
       <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-q" data-ru="«Лицензия офлайн» — почему тогда проверка раз в сутки?" data-en="'Offline license' — so why a daily check?">«Лицензия офлайн» — почему тогда проверка раз в сутки?</div>
+        <details class="faq-item">
+          <summary class="faq-q" data-ru="«Лицензия офлайн» — почему тогда проверка раз в сутки?" data-en="'Offline license' — so why a daily check?">«Лицензия офлайн» — почему тогда проверка раз в сутки?</summary>
           <div class="faq-a" data-ru="Подпись вашей лицензии проверяется локально (ECDSA P-256) — без нас вы работаете офлайн, мы не видим ни ваш код, ни токены. Раз в сутки расширение шлёт один лёгкий запрос: не отозвана ли лицензия (возврат/абьюз). Без связи — грейс 24 ч (72 ч, если не отвечаем мы, а интернет есть), затем PRO временно ставится на паузу и сам восстанавливается при следующей успешной проверке. Ключ хранится локально и не стирается." data-en="Your license signature is verified locally (ECDSA P-256) — you work offline without us seeing your code or tokens. Once a day the extension sends one lightweight request: has the license been revoked (refund/abuse)? Without a connection you get a 24 h grace period (72 h when we're the ones offline and the network is up), then PRO pauses and resumes automatically on the next successful check. Your key stays on disk and is never erased.">Подпись вашей лицензии проверяется локально (ECDSA P-256) — без нас вы работаете офлайн, мы не видим ни ваш код, ни токены. Раз в сутки расширение шлёт один лёгкий запрос: не отозвана ли лицензия (возврат/абьюз). Без связи — грейс 24 ч (72 ч, если не отвечаем мы, а интернет есть), затем PRO временно ставится на паузу и сам восстанавливается при следующей успешной проверке. Ключ хранится локально и не стирается.</div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <div class="faq-q" data-ru="Работаю за корпоративным прокси. Что делать?" data-en="I'm behind a corporate proxy. What do I do?">Работаю за корпоративным прокси. Что делать?</div>
+        <details class="faq-item">
+          <summary class="faq-q" data-ru="Работаю за корпоративным прокси. Что делать?" data-en="I'm behind a corporate proxy. What do I do?">Работаю за корпоративным прокси. Что делать?</summary>
           <div class="faq-a" data-ru="Проще всего — добавить домен сервера лицензий <code>license.mr-creator.ru</code> (исходящий TCP 443) в allowlist через IT-заявку — это бесплатный путь, никакой enterprise-версии не нужно. Во время грейс-периода расширение продолжит работать и без этого. Если политика безопасности строгая и внешние запросы запрещены совсем — есть self-hosted контейнер лицензий для air-gapped команд, подробности по <a href='mailto:support@mr-creator.ru'>support@mr-creator.ru</a>." data-en="The easiest path is adding the license-server domain <code>license.mr-creator.ru</code> (outbound TCP 443) to the IT allowlist — free, no enterprise purchase required. The grace period keeps PRO working even before that. If external requests are banned entirely, there's a self-hosted license container for air-gapped teams — ask <a href='mailto:support@mr-creator.ru'>support@mr-creator.ru</a>.">Проще всего — добавить домен сервера лицензий <code>license.mr-creator.ru</code> (исходящий TCP 443) в allowlist через IT-заявку — это бесплатный путь, никакой enterprise-версии не нужно. Во время грейс-периода расширение продолжит работать и без этого. Если политика безопасности строгая и внешние запросы запрещены совсем — есть self-hosted контейнер лицензий для air-gapped команд, подробности по <a href='mailto:support@mr-creator.ru'>support@mr-creator.ru</a>.</div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <div class="faq-q" data-ru="Как проверить, что лицензия ещё активна?" data-en="How do I check my license status?">Как проверить, что лицензия ещё активна?</div>
+        <details class="faq-item">
+          <summary class="faq-q" data-ru="Как проверить, что лицензия ещё активна?" data-en="How do I check my license status?">Как проверить, что лицензия ещё активна?</summary>
           <div class="faq-a">
             <ul class="howto-list">
               <li data-ru="Панель команд (Ctrl+Shift+P) → <strong>MR Creator: Show License Info</strong> — статус PRO, срок, состояние офлайн-проверки." data-en="Command Palette (Ctrl+Shift+P) → <strong>MR Creator: Show License Info</strong> — PRO status, expiry, offline-check state.">Панель команд (Ctrl+Shift+P) → <strong>MR Creator: Show License Info</strong> — статус PRO, срок, состояние офлайн-проверки.</li>
@@ -487,17 +487,17 @@
               <li data-ru="Ключ и статус также видны в Telegram-боте в разделе «Моя лицензия»." data-en="Key and status are also visible in the Telegram bot under 'My License'.">Ключ и статус также видны в Telegram-боте в разделе «Моя лицензия».</li>
             </ul>
           </div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <div class="faq-q" data-ru="Что происходит с данными? Вы что-то собираете?" data-en="What data do you collect?">Что происходит с данными? Вы что-то собираете?</div>
+        <details class="faq-item">
+          <summary class="faq-q" data-ru="Что происходит с данными? Вы что-то собираете?" data-en="What data do you collect?">Что происходит с данными? Вы что-то собираете?</summary>
           <div class="faq-a" data-ru="Код, репозитории, токены и лицензия не покидают вашу машину (secret'ы — в OS keychain и SecretStorage). Единственный исходящий запрос, связанный с лицензией, — раз в сутки к серверу, который подтверждает, что лицензия не отозвана. Данных о ваших репозиториях и коде мы не видим." data-en="Your code, repositories, tokens and license never leave your machine (secrets live in the OS keychain and SecretStorage). The only outbound license-related request is the daily check confirming your license wasn't revoked. We never see your repos or code.">Код, репозитории, токены и лицензия не покидают вашу машину (secret'ы — в OS keychain и SecretStorage). Единственный исходящий запрос, связанный с лицензией, — раз в сутки к серверу, который подтверждает, что лицензия не отозвана. Данных о ваших репозиториях и коде мы не видим.</div>
-        </div>
+        </details>
 
-        <div class="faq-item">
-          <div class="faq-q" data-ru="Почему платно, если лицензия проверяется локально?" data-en="Why paid if the license is checked locally?">Почему платно, если лицензия проверяется локально?</div>
-          <div class="faq-a" data-ru="Расширение живёт на внедорожной разработке своих разработчиков. Лицензия — локальная, телеметрии нет, токены хранятся у вас. Мы берём деньги за доступ к PRO-функциям (Code Review, безлимитные подключения), а не за продажу ваших данных. GitLens уже давно работает по freemium-модели — рынок принял платные расширения." data-en="The extension is sustainably built by its developers. The license is local, there's no telemetry, tokens stay with you. We charge for PRO features (Code Review, unlimited connections) — not for selling your data. GitLens has been freemium for years — the market accepted paid extensions.">Расширение живёт на внедорожной разработке своих разработчиков. Лицензия — локальная, телеметрии нет, токены хранятся у вас. Мы берём деньги за доступ к PRO-функциям (Code Review, безлимитные подключения), а не за продажу ваших данных. GitLens уже давно работает по freemium-модели — рынок принял платные расширения.</div>
-        </div>
+        <details class="faq-item">
+          <summary class="faq-q" data-ru="Почему платно, если лицензия проверяется локально?" data-en="Why paid if the license is checked locally?">Почему платно, если лицензия проверяется локально?</summary>
+          <div class="faq-a" data-ru="Расширение — независимый проект: оно живёт за счёт продаж лицензий, а не рекламы или продажи данных. Лицензия — локальная, телеметрии нет, токены хранятся у вас. Мы берём деньги за доступ к PRO-функциям (Code Review, безлимитные подключения), а не за продажу ваших данных. GitLens уже давно работает по freemium-модели — рынок принял платные расширения." data-en="MR Creator is an independent project funded by license sales — not ads or data-selling. The license is local, there's no telemetry, tokens stay with you. We charge for PRO features (Code Review, unlimited connections) — not for selling your data. GitLens has been freemium for years — the market accepted paid extensions.">Расширение — независимый проект: оно живёт за счёт продаж лицензий, а не рекламы или продажи данных. Лицензия — локальная, телеметрии нет, токены хранятся у вас. Мы берём деньги за доступ к PRO-функциям (Code Review, безлимитные подключения), а не за продажу ваших данных. GitLens уже давно работает по freemium-модели — рынок принял платные расширения.</div>
+        </details>
       </div>
     </div>
   </section>
@@ -598,10 +598,10 @@
       <p class="section-desc" data-ru="Честно и по закону: что вы теряете при покупке и что получаете при возврате." data-en="Honest and legal: what you lose on purchase and what you get on refund.">Честно и по закону: что вы теряете при покупке и что получаете при возврате.</p>
 
       <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-q" data-ru="Могу ли я вернуть деньги после покупки?" data-en="Can I get a refund after purchase?">Могу ли я вернуть деньги после покупки?</div>
+        <details class="faq-item">
+          <summary class="faq-q" data-ru="Могу ли я вернуть деньги после покупки?" data-en="Can I get a refund after purchase?">Могу ли я вернуть деньги после покупки?</summary>
           <div class="faq-a" data-ru="Лицензия — цифровой товар, который доставляется и активируется сразу после оплаты (это начало исполнения). Поэтому, как и у любого активированного цифрового товара, право отказа в течение 14 дней (Директива ЕС 2011/83/EU; для РФ — Закон о защите прав потребителей № 2300-1) не применяется — вы подтверждаете это явным шагом перед оплатой в боте. Возврат выдаётся при подтверждённом техническом браке: при возврате лицензия отзывается и перестаёт работать при следующей проверке на сервере лицензий. Возвраты Telegram Stars обрабатывает Telegram по своей политике (запрос в течение 21 дня, возврат в Stars)." data-en="The license is a digital good that is delivered and activated right after payment (its start of performance). As with any activated digital good, the 14-day withdrawal right (EU Directive 2011/83/EU; in Russia — RF Law No. 2300-1) does not apply — you confirm this explicitly before paying in the bot. Refunds are issued for confirmed technical defects: on refund the license is revoked and stops working at the next license-server check. Telegram Stars refunds are handled by Telegram under its Stars policy (request within 21 days, refund in Stars).">Лицензия — цифровой товар, который доставляется и активируется сразу после оплаты (это начало исполнения). Поэтому, как и у любого активированного цифрового товара, право отказа в течение 14 дней (Директива ЕС 2011/83/EU; для РФ — Закон о защите прав потребителей № 2300-1) не применяется — вы подтверждаете это явным шагом перед оплатой в боте. Возврат выдаётся при подтверждённом техническом браке: при возврате лицензия отзывается и перестаёт работать при следующей проверке на сервере лицензий. Возвраты Telegram Stars обрабатывает Telegram по своей политике (запрос в течение 21 дня, возврат в Stars).</div>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -643,7 +643,7 @@
         const lang = btn.dataset.lang;
         document.documentElement.setAttribute('data-lang', lang);
         document.querySelectorAll('[data-ru][data-en]').forEach(el => {
-          el.textContent = el.getAttribute('data-' + lang);
+          el.innerHTML = el.getAttribute('data-' + lang);
         });
       });
     });
