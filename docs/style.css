@@ -570,8 +570,8 @@ body {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -580,7 +580,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 28px 24px;
+  padding: 20px 16px;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -620,7 +620,7 @@ body {
 }
 
 .plan-price {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 800;
   color: var(--text-bright);
   text-align: center;
@@ -655,46 +655,6 @@ body {
 }
 
 .plan-list li.plan-muted::before { color: var(--text-dim); }
-
-.why-paid {
-  max-width: 720px;
-  margin: 32px auto 0;
-  padding: 20px 24px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-}
-
-.why-paid-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text-bright);
-  margin-bottom: 10px;
-}
-
-.why-paid-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.why-paid-list li {
-  position: relative;
-  padding-left: 22px;
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--text);
-}
-
-.why-paid-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.why-paid-list li + li { margin-top: 8px; }
 
 .btn-block {
   width: 100%;
@@ -994,5 +954,5 @@ details.faq-item[open] > summary.faq-q {
   .compare-row { grid-template-columns: 1fr 64px 64px; }
   .compare-feature { padding: 12px 10px; font-size: 13px; }
   .compare-cell { padding: 12px 8px; font-size: 13px; }
-  .pricing-grid { max-width: 420px; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
 }
