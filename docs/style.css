@@ -656,6 +656,46 @@ body {
 
 .plan-list li.plan-muted::before { color: var(--text-dim); }
 
+.why-paid {
+  max-width: 720px;
+  margin: 32px auto 0;
+  padding: 20px 24px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.why-paid-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 10px;
+}
+
+.why-paid-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.why-paid-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.why-paid-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.why-paid-list li + li { margin-top: 8px; }
+
 .btn-block {
   width: 100%;
   justify-content: center;
