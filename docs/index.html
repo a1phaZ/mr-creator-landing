@@ -454,6 +454,11 @@
       <p class="section-desc" data-ru="Новые возможности последних версий — только то, что влияет на работу." data-en="New features of recent releases — only what affects how you work.">Новые возможности последних версий — только то, что влияет на работу.</p>
       <div class="faq-list">
         <details class="faq-item">
+          <summary class="faq-q" data-ru="3.1.2 — исправления и улучшения" data-en="3.1.2 — fixes and improvements">3.1.2 — исправления и улучшения</summary>
+          <div class="faq-a" data-ru="Новых функций нет: исправлены ошибки и улучшена стабильность." data-en="No new features: bug fixes and stability improvements.">Новых функций нет: исправлены ошибки и улучшена стабильность.</div>
+        </details>
+
+        <details class="faq-item">
           <summary class="faq-q" data-ru="3.1.1 — исправления и улучшения" data-en="3.1.1 — fixes and improvements">3.1.1 — исправления и улучшения</summary>
           <div class="faq-a" data-ru="Новых функций нет: исправлены ошибки и улучшена стабильность." data-en="No new features: bug fixes and stability improvements.">Новых функций нет: исправлены ошибки и улучшена стабильность.</div>
         </details>
@@ -466,11 +471,6 @@
         <details class="faq-item">
           <summary class="faq-q" data-ru="2.1.0 — Code Review в редакторе" data-en="2.1.0 — Code Review in the editor">2.1.0 — Code Review в редакторе</summary>
           <div class="faq-a" data-ru="Открытие диффа прямо в VS Code, инлайн-комментарии; для своих MR — без кнопки Approve." data-en="Open diffs right in VS Code, inline comments; for your own MRs the Approve button is hidden.">Открытие диффа прямо в VS Code, инлайн-комментарии; для своих MR — без кнопки Approve.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-q" data-ru="2.0.0 — всё в одном расширении" data-en="2.0.0 — everything in one extension">2.0.0 — всё в одном расширении</summary>
-          <div class="faq-a" data-ru="MR + Code Review + GitLab, GitHub, Bitbucket (включая self-hosted) в одном расширении." data-en="MR + Code Review + GitLab, GitHub, Bitbucket (incl. self-hosted) in one extension.">MR + Code Review + GitLab, GitHub, Bitbucket (включая self-hosted) в одном расширении.</div>
         </details>
       </div>
     </div>
@@ -706,6 +706,18 @@
       pro_365d: { days: 365, usd: 49 },
     };
 
+    // The server already restricts the redirect to auth.robokassa.ru (https);
+    // this is a client-side guard so a malicious/misconfigured API response
+    // cannot send the buyer to a javascript: URL or another host.
+    function isSafePaymentUrl(value) {
+      try {
+        const u = new URL(value);
+        return u.protocol === 'https:' && u.hostname === 'auth.robokassa.ru';
+      } catch (e) {
+        return false;
+      }
+    }
+
     const T = {
       ru: {
         rub: '₽', month: 'месяц', year: 'год', days: 'дн.',
@@ -824,6 +836,7 @@
           return;
         }
         if (!data.paymentUrl) throw new Error('no paymentUrl');
+        if (!isSafePaymentUrl(data.paymentUrl)) throw new Error('bad paymentUrl');
         window.location.href = data.paymentUrl;
       } catch (err) {
         errorBox.textContent = t('pay');
@@ -857,7 +870,7 @@
       "offerCount": "5",
       "description": "Free to start; PRO from $5/month, Lifetime $99, Team $149/seat. 14-day free PRO trial."
     },
-    "softwareVersion": "3.1.1",
+    "softwareVersion": "3.1.2",
     "downloadUrl": "https://marketplace.visualstudio.com/items?itemName=alphaZ.mr-creator-ext",
     "url": "https://mr-creator.ru/",
     "screenshot": "https://mr-creator.ru/og-image.svg"
