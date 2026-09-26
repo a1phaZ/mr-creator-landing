@@ -325,7 +325,10 @@
             <li data-ru="Code Review в редакторе" data-en="Code Review in editor">Code Review в редакторе</li>
             <li data-ru="Auto-merge watcher" data-en="Auto-merge watcher">Auto-merge watcher</li>
           </ul>
-          <a href="https://t.me/mr_creator_license_bot" class="btn btn-primary btn-block" data-ru="Купить" data-en="Buy">Купить</a>
+          <div class="plan-actions">
+            <a href="https://t.me/mr_creator_license_bot" class="btn btn-primary btn-block" data-ru="Купить" data-en="Buy">Купить</a>
+            <button class="btn btn-ghost btn-block" data-pay-plan="pro_30d" data-ru="Оплатить картой" data-en="Pay by card">Оплатить картой</button>
+          </div>
         </div>
 
         <div class="plan-card">
@@ -337,7 +340,10 @@
             <li data-ru="Выгоднее на 18%" data-en="18% cheaper">Выгоднее на 18%</li>
             <li data-ru="Продление с сохранением дней" data-en="Renewal keeps unused days">Продление с сохранением дней</li>
           </ul>
-          <a href="https://t.me/mr_creator_license_bot" class="btn btn-outline btn-block" data-ru="Купить" data-en="Buy">Купить</a>
+          <div class="plan-actions">
+            <a href="https://t.me/mr_creator_license_bot" class="btn btn-outline btn-block" data-ru="Купить" data-en="Buy">Купить</a>
+            <button class="btn btn-ghost btn-block" data-pay-plan="pro_365d" data-ru="Оплатить картой" data-en="Pay by card">Оплатить картой</button>
+          </div>
         </div>
 
         <div class="plan-card">
@@ -608,6 +614,10 @@
 
       <div class="faq-list">
         <details class="faq-item">
+          <summary class="faq-q" data-ru="Как оплатить картой и в какой валюте?" data-en="How do I pay by card and in which currency?">Как оплатить картой и в какой валюте?</summary>
+          <div class="faq-a" data-ru="На тарифах Month и Year доступна оплата картой через Robokassa. Сумма в рублях считается по курсу USD/ЦБ на момент оплаты и округляется вверх до 10 ₽ — курс, зафиксированный при создании платежа, и есть ваш финальный чек. После оплаты лицензия приходит в Telegram на указанный вами username, поэтому сначала напишите боту. Тарифы Lifetime и Team оплачиваются через бота в Telegram Stars." data-en="Card payment via Robokassa is available on the Month and Year plans. The ruble amount uses the USD/CBR rate at the moment of payment, rounded up to 10 ₽ — the rate locked in when the payment was created is the final amount. After paying, the license arrives in Telegram on the username you provide, so message the bot first. Lifetime and Team are paid for through the bot using Telegram Stars.">На тарифах Month и Year доступна оплата картой через Robokassa. Сумма в рублях считается по курсу USD/ЦБ на момент оплаты и округляется вверх до 10 ₽ — курс, зафиксированный при создании платежа, и есть ваш чек. После оплаты лицензия приходит в Telegram на указанный вами username, поэтому сначала напишите боту. Тарифы Lifetime и Team оплачиваются через бота в Telegram Stars.</div>
+        </details>
+        <details class="faq-item">
           <summary class="faq-q" data-ru="Могу ли я вернуть деньги после покупки?" data-en="Can I get a refund after purchase?">Могу ли я вернуть деньги после покупки?</summary>
           <div class="faq-a" data-ru="Лицензия — цифровой товар, который доставляется и активируется сразу после оплаты (это начало исполнения). Поэтому, как и у любого активированного цифрового товара, право отказа в течение 14 дней (Директива ЕС 2011/83/EU; для РФ — Закон о защите прав потребителей № 2300-1) не применяется — вы подтверждаете это явным шагом перед оплатой в боте. Возврат выдаётся при подтверждённом техническом браке: при возврате лицензия отзывается и перестаёт работать при следующей проверке на сервере лицензий. Возвраты Telegram Stars обрабатывает Telegram по своей политике (запрос в течение 21 дня, возврат в Stars)." data-en="The license is a digital good that is delivered and activated right after payment (its start of performance). As with any activated digital good, the 14-day withdrawal right (EU Directive 2011/83/EU; in Russia — RF Law No. 2300-1) does not apply — you confirm this explicitly before paying in the bot. Refunds are issued for confirmed technical defects: on refund the license is revoked and stops working at the next license-server check. Telegram Stars refunds are handled by Telegram under its Stars policy (request within 21 days, refund in Stars).">Лицензия — цифровой товар, который доставляется и активируется сразу после оплаты (это начало исполнения). Поэтому, как и у любого активированного цифрового товара, право отказа в течение 14 дней (Директива ЕС 2011/83/EU; для РФ — Закон о защите прав потребителей № 2300-1) не применяется — вы подтверждаете это явным шагом перед оплатой в боте. Возврат выдаётся при подтверждённом техническом браке: при возврате лицензия отзывается и перестаёт работать при следующей проверке на сервере лицензий. Возвраты Telegram Stars обрабатывает Telegram по своей политике (запрос в течение 21 дня, возврат в Stars).</div>
         </details>
@@ -644,6 +654,31 @@
     </div>
   </footer>
 
+  <!-- Card payment modal -->
+  <div class="modal" id="pay-modal" role="dialog" aria-modal="true" aria-labelledby="pay-modal-title">
+    <div class="modal-box">
+      <h3 class="modal-title" id="pay-modal-title" data-ru="Оплата картой" data-en="Pay by card">Оплата картой</h3>
+      <p class="modal-sub">
+        <span data-ru="Лицензия придёт в Telegram. Сначала напишите боту" data-en="The license is delivered in Telegram. Start the bot first at">Лицензия придёт в Telegram. Сначала напишите боту</span>
+        <a href="https://t.me/mr_creator_license_bot" target="_blank" rel="noopener">@mr_creator_license_bot</a>
+      </p>
+
+      <div class="modal-summary" id="pay-summary"></div>
+
+      <form id="pay-form" novalidate>
+        <label class="field-label" for="pay-username" data-ru="Ваш Telegram username" data-en="Your Telegram username">Ваш Telegram username</label>
+        <input class="field-input" id="pay-username" name="username" type="text" autocomplete="off"
+               spellcheck="false" placeholder="@username" data-placeholder-ru="@username" data-placeholder-en="@username">
+        <p class="field-hint" data-ru="Без @ тоже можно. Это публичный username, по нему мы найдём ваш аккаунт." data-en="The @ is optional. A public username — we use it to look up your account.">Без @ тоже можно. Это публичный username, по нему мы найдём ваш аккаунт.</p>
+        <p class="modal-error" id="pay-error"></p>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-outline" id="pay-cancel" data-ru="Отмена" data-en="Cancel">Отмена</button>
+          <button type="submit" class="btn btn-primary" id="pay-submit" data-ru="Перейти к оплате" data-en="Continue to payment">Перейти к оплате</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script>
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -654,8 +689,156 @@
         document.querySelectorAll('[data-ru][data-en]').forEach(el => {
           el.innerHTML = el.getAttribute('data-' + lang);
         });
+        document.querySelectorAll('[data-placeholder-ru][data-placeholder-en]').forEach(el => {
+          el.setAttribute('placeholder', el.getAttribute('data-placeholder-' + lang));
+        });
+        if (typeof window.__onLangChange === 'function') window.__onLangChange();
       });
     });
+  </script>
+
+  <script>
+  (function () {
+    const API = 'https://payment.mr-creator.ru/api/payments';
+    const BOT = 'https://t.me/mr_creator_license_bot';
+    const PAY_PLANS = {
+      pro_30d: { days: 30, usd: 5 },
+      pro_365d: { days: 365, usd: 49 },
+    };
+
+    const T = {
+      ru: {
+        rub: '₽', month: 'месяц', year: 'год', days: 'дн.',
+        empty: 'Введите username', bad: 'Username не найден. Проверьте, что он публичный и вы написали боту.',
+        pay: 'Ошибка оплаты. Попробуйте позже.', busy: 'Отправляем…',
+      },
+      en: {
+        rub: '₽', month: 'month', year: 'year', days: 'days',
+        empty: 'Enter your username', bad: 'Username not found. Check that it is public and that you have messaged the bot.',
+        pay: 'Payment error. Please try again later.', busy: 'Redirecting…',
+      },
+    };
+
+    function lang() {
+      return document.documentElement.getAttribute('data-lang') === 'en' ? 'en' : 'ru';
+    }
+    function t(key) { return T[lang()][key]; }
+
+    let rate = null;
+    let plansReady = false;
+    let activeKey = null;
+
+    const modal = document.getElementById('pay-modal');
+    const form = document.getElementById('pay-form');
+    const input = document.getElementById('pay-username');
+    const errorBox = document.getElementById('pay-error');
+    const summary = document.getElementById('pay-summary');
+    const submit = document.getElementById('pay-submit');
+
+    function rub(usd) {
+      return Math.ceil((usd * rate) / 10) * 10;
+    }
+
+    function planLabel() {
+      const p = PAY_PLANS[activeKey];
+      if (!p) return '';
+      const per = p.days >= 365 ? t('year') : t('month');
+      return '$' + p.usd + ' · ' + p.days + ' ' + t('days') + ' · ≈' + rub(p.usd) + ' ' + t('rub') + ' / ' + per;
+    }
+
+    function setPayButtons(enabled) {
+      document.querySelectorAll('[data-pay-plan]').forEach(btn => {
+        btn.disabled = !enabled;
+      });
+    }
+
+    function openModal(key) {
+      activeKey = key;
+      errorBox.textContent = '';
+      input.value = '';
+      summary.textContent = planLabel();
+      modal.classList.add('open');
+      input.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      activeKey = null;
+    }
+
+    async function loadPlans() {
+      try {
+        const res = await fetch(API + '/plans');
+        if (!res.ok) throw new Error('http ' + res.status);
+        const data = await res.json();
+        rate = typeof data.rate === 'number' && data.rate > 0 ? data.rate : null;
+        plansReady = !!data.configured && rate !== null;
+      } catch (err) {
+        plansReady = false;
+      }
+      // The Telegram Stars button stays the fallback, so a card outage or a
+      // payment host that is still off DNS must not block the purchase path.
+      setPayButtons(plansReady);
+    }
+
+    document.querySelectorAll('[data-pay-plan]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!plansReady) {
+          window.location.href = BOT;
+          return;
+        }
+        openModal(btn.dataset.payPlan);
+      });
+    });
+
+    document.getElementById('pay-cancel').addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const username = input.value.trim().replace(/^@/, '');
+      if (!username) {
+        errorBox.textContent = t('empty');
+        return;
+      }
+
+      submit.disabled = true;
+      const label = submit.textContent;
+      submit.textContent = t('busy');
+      errorBox.textContent = '';
+
+      try {
+        const res = await fetch(API + '/create', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ planKey: activeKey, telegramUsername: username }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          errorBox.textContent = res.status === 404 ? t('bad') : (data.error || t('pay'));
+          submit.disabled = false;
+          submit.textContent = label;
+          return;
+        }
+        if (!data.paymentUrl) throw new Error('no paymentUrl');
+        window.location.href = data.paymentUrl;
+      } catch (err) {
+        errorBox.textContent = t('pay');
+        submit.disabled = false;
+        submit.textContent = label;
+      }
+    });
+
+    window.__onLangChange = function () {
+      if (modal.classList.contains('open')) summary.textContent = planLabel();
+    };
+
+    setPayButtons(false);
+    loadPlans();
+  })();
   </script>
 
   <script type="application/ld+json">

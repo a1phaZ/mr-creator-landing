@@ -946,3 +946,127 @@ details.faq-item[open] > summary.faq-q {
   .compare-cell { padding: 12px 8px; font-size: 13px; }
   .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
 }
+
+/* Card payment (Robokassa) */
+.btn-ghost {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid transparent;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.btn-ghost:hover {
+  color: var(--accent);
+  border-color: var(--border);
+}
+
+.btn-ghost[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.plan-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pay-rate {
+  font-size: 12px;
+  color: var(--text-dim);
+  text-align: center;
+  min-height: 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.open { display: flex; }
+
+.modal-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0 0 6px;
+}
+
+.modal-sub {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin: 0 0 18px;
+}
+
+.modal-sub a { color: var(--accent); text-decoration: none; }
+
+.field-label {
+  display: block;
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.field-input {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  padding: 10px 12px;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.field-hint {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin: 8px 0 0;
+}
+
+.modal-error {
+  font-size: 13px;
+  color: var(--red);
+  margin: 12px 0 0;
+}
+
+.modal-error:empty { display: none; }
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-summary {
+  font-size: 13px;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+}
