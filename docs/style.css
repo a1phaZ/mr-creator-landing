@@ -115,6 +115,10 @@ body {
 .btn-sm { padding: 6px 14px; font-size: 13px; }
 .btn-lg { padding: 14px 28px; font-size: 16px; }
 
+/* An author-level `display` on .btn outranks the user-agent `[hidden]` rule, so
+   the attribute needs this to actually hide anything. */
+[hidden] { display: none !important; }
+
 .btn-primary {
   background: var(--accent);
   color: var(--text-bright);
@@ -962,23 +966,10 @@ details.faq-item[open] > summary.faq-q {
   border-color: var(--border);
 }
 
-.btn-ghost[disabled] {
-  opacity: 0.45;
-  cursor: not-allowed;
-  transform: none;
-}
-
 .plan-actions {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.pay-rate {
-  font-size: 12px;
-  color: var(--text-dim);
-  text-align: center;
-  min-height: 16px;
 }
 
 .modal {
