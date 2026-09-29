@@ -1009,34 +1009,45 @@ details.faq-item[open] > summary.faq-q {
 
 .modal-sub a { color: var(--accent); text-decoration: none; }
 
-.field-label {
-  display: block;
-  font-size: 13px;
-  color: var(--text);
-  margin-bottom: 6px;
+/* The widget injects its own iframe, so the container only positions it. */
+.pay-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4px 0 2px;
 }
 
-.field-input {
-  width: 100%;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text);
-  font-family: var(--font);
-  font-size: 14px;
-  padding: 10px 12px;
-}
-
-.field-input:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.field-hint {
+.pay-auth .field-hint {
+  margin: 0;
+  max-width: 34ch;
   font-size: 12px;
   color: var(--text-dim);
-  margin: 8px 0 0;
 }
+
+.pay-auth iframe { max-width: 100%; }
+
+.pay-authed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-dim);
+  margin: 12px 0 0;
+}
+
+.pay-authed b { color: var(--text); }
+
+.pay-auth-alt {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-dim);
+  margin: 12px 0 0;
+}
+
+.pay-auth-alt:hover { color: var(--accent); }
 
 .modal-error {
   font-size: 13px;
