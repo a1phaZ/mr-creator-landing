@@ -580,6 +580,34 @@ body {
   margin: 0 auto;
 }
 
+/* Individual and team plans are separate grids: the team prices are quoted for
+   three included seats, so putting one $147 card next to a $5 one in a single
+   row would read as a per-seat comparison that the pricing does not support. */
+.pricing-group-label {
+  max-width: 1000px;
+  margin: 40px auto 6px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.pricing-group-note {
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.plan-price-custom {
+  font-size: 30px;
+}
+
+.plan-card.plan-contact {
+  border-style: dashed;
+}
+
 .plan-card {
   position: relative;
   display: flex;
@@ -949,126 +977,4 @@ details.faq-item[open] > summary.faq-q {
   .compare-feature { padding: 12px 10px; font-size: 13px; }
   .compare-cell { padding: 12px 8px; font-size: 13px; }
   .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
-}
-
-/* Card payment (Robokassa) */
-.btn-ghost {
-  background: transparent;
-  color: var(--text-dim);
-  border: 1px solid transparent;
-  padding: 8px 20px;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.btn-ghost:hover {
-  color: var(--accent);
-  border-color: var(--border);
-}
-
-.plan-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.7);
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.modal.open { display: flex; }
-
-.modal-box {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 28px;
-  width: 100%;
-  max-width: 400px;
-}
-
-.modal-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text-bright);
-  margin: 0 0 6px;
-}
-
-.modal-sub {
-  font-size: 13px;
-  color: var(--text-dim);
-  margin: 0 0 18px;
-}
-
-.modal-sub a { color: var(--accent); text-decoration: none; }
-
-/* The widget injects its own iframe, so the container only positions it. */
-.pay-auth {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 4px 0 2px;
-}
-
-.pay-auth .field-hint {
-  margin: 0;
-  max-width: 34ch;
-  font-size: 12px;
-  color: var(--text-dim);
-}
-
-.pay-auth iframe { max-width: 100%; }
-
-.pay-authed {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  font-size: 13px;
-  color: var(--text-dim);
-  margin: 12px 0 0;
-}
-
-.pay-authed b { color: var(--text); }
-
-.pay-auth-alt {
-  display: block;
-  text-align: center;
-  font-size: 12px;
-  color: var(--text-dim);
-  margin: 12px 0 0;
-}
-
-.pay-auth-alt:hover { color: var(--accent); }
-
-.modal-error {
-  font-size: 13px;
-  color: var(--red);
-  margin: 12px 0 0;
-}
-
-.modal-error:empty { display: none; }
-
-.modal-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.modal-summary {
-  font-size: 13px;
-  color: var(--text);
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 10px 12px;
-  margin-bottom: 16px;
 }
