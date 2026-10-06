@@ -658,11 +658,35 @@ body {
   text-align: center;
 }
 
+/* Two lines: the ruble is what a Russian buyer actually pays and reads first,
+   the dollar sits under it as the amount the price list is written in. The
+   ruble inherits the size so .plan-price-custom (which has no children and
+   says "On request") stays exactly as it was. */
+.plan-price .price-rub {
+  display: block;
+}
+
+.plan-price .price-usd {
+  display: block;
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
 .plan-period {
   font-size: 13px;
   color: var(--text-dim);
   text-align: center;
   margin-bottom: 20px;
+}
+
+.pricing-note {
+  margin-top: 18px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  text-align: center;
 }
 
 .plan-list {
