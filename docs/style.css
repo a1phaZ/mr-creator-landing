@@ -505,6 +505,40 @@ body {
   border: 1px solid rgba(63, 185, 80, 0.35);
 }
 
+.chip-progress {
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--green);
+  border: 1px solid rgba(63, 185, 80, 0.35);
+}
+
+.chip-next {
+  background: rgba(0, 122, 204, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(0, 122, 204, 0.35);
+}
+
+.chip-exploring {
+  background: rgba(124, 92, 191, 0.15);
+  color: var(--purple);
+  border: 1px solid rgba(124, 92, 191, 0.35);
+}
+
+.roadmap .adv-card .chip {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.roadmap-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.roadmap-note a {
+  color: var(--accent);
+}
+
 .providers-cta {
   text-align: center;
 }
